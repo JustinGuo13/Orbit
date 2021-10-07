@@ -93,7 +93,13 @@ export default function CreateItem() {
 					onChange={(e) => updateFormInput({ ...formInput, price: e.target.value })}
 				/>
 				<input type="file" name="Asset" className="my-4" onChange={onChange} />
-				{fileUrl && <img className="rounded mt-4" width="350" src={fileUrl} />}
+				{fileUrl && (
+					<img
+						className="mt-2 border rounded filter drop-shadow-lg"
+						width="350"
+						src={fileUrl}
+					/>
+				)}
 				<button
 					onClick={createMarket}
 					className="font-bold mt-5 bg-green-500 text-white rounded p-4 shadow-lg hover:bg-green-600"
