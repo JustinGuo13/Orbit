@@ -51,7 +51,7 @@ export default function CreatorDashboard() {
 		setLoadingState('loaded');
 	}
 	if (loadingState === 'loaded' && !nfts.length)
-		return <h1 className="py-10 px-20 text-3xl">No assets created</h1>;
+		return <h1 className="py-10 px-20 text-3xl text-green-400">No assets created</h1>;
 	return (
 		<div>
 			<div className="p-4">
