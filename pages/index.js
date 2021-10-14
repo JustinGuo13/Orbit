@@ -73,7 +73,7 @@ export default function Home() {
 					{nfts.map((nft, i) => (
 						<div
 							key={i}
-							className="aspect-w-3 aspect-h-3 shadow rounded-xl overflow-hidden"
+							className="aspect-w-4 aspect-h-4 shadow rounded-xl overflow-hidden"
 						>
 							<img src={nft.image} />
 							<div className="p-4 bg-green-400">
