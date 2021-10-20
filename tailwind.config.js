@@ -1,9 +1,12 @@
 module.exports = {
-	purge: [],
+	purge: ['./pages/*.js'],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
 			spacing: {
+				72: '18rem',
+				84: '21rem',
+				96: '24rem',
 				'1/1': '100%',
 				'1/2': '50%',
 				'1/3': '33.333333%',

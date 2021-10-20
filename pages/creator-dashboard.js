@@ -2,6 +2,7 @@ import { ethers } from 'ethers';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Web3Modal from 'web3modal';
+import Image from 'next/image';
 
 import { nftmarketaddress, nftaddress } from '../config';
 
@@ -54,12 +55,14 @@ export default function CreatorDashboard() {
 		return <h1 className="py-10 px-20 text-3xl text-green-400">No assets created</h1>;
 	return (
 		<div>
-			<div className="p-4">
-				<h2 className="text-green-400 text-2xl py-2">Items Created</h2>
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+			<div className="p-10">
+				<h2 className="text-green-400 text-3xl py-2">Items Created</h2>
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
 					{nfts.map((nft, i) => (
 						<div key={i} className="shadow rounded-xl overflow-hidden">
-							<img src={nft.image} />
+							<div className="h-96 w-full relative">
+								<Image src={nft.image} layout="fill" objectFit="cover" />
+							</div>
 							<div className="p-4 bg-black">
 								<p className="text-2xl font-bold text-white">
 									Price - {nft.price} Eth

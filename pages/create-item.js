@@ -3,6 +3,7 @@ import { ethers } from 'ethers';
 import { create as ipfsHttpClient } from 'ipfs-http-client';
 import { useRouter } from 'next/router';
 import Web3Modal from 'web3modal';
+import Image from 'next/image';
 
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
 
@@ -79,17 +80,17 @@ export default function CreateItem() {
 			<div className="w-1/2 flex flex-col pb-12">
 				<input
 					placeholder="Asset Name"
-					className="mt-8 border-2 rounded border-green-500 p-4"
+					className="mt-8 border-2 rounded-lg border-green-500 p-4 bg-gray-700 placeholder-green-300 text-white outline-none"
 					onChange={(e) => updateFormInput({ ...formInput, name: e.target.value })}
 				/>
 				<textarea
 					placeholder="Asset Description"
-					className="mt-5 border-2 rounded border-green-500 p-4"
+					className="mt-5 border-2 rounded-lg border-green-500 p-4 bg-gray-700 placeholder-green-300 text-white outline-none"
 					onChange={(e) => updateFormInput({ ...formInput, description: e.target.value })}
 				/>
 				<input
 					placeholder="Asset Price in Eth"
-					className="mt-5 border-2 rounded border-green-500 p-4"
+					className="mt-5 border-2 rounded-lg border-green-500 p-4 bg-gray-700 placeholder-green-300 text-white outline-none"
 					onChange={(e) => updateFormInput({ ...formInput, price: e.target.value })}
 				/>
 				<input
@@ -98,10 +99,15 @@ export default function CreateItem() {
 					className="my-4 text text-white"
 					onChange={onChange}
 				/>
-				{fileUrl && <img className="mt-2 border rounded" width="350" src={fileUrl} />}
+				{fileUrl && (
+					<div className="h-96 w-96 relative mt-2 border rounded">
+						<Image src={fileUrl} layout="fill" />
+					</div>
+				)}
+
 				<button
 					onClick={createMarket}
-					className="font-bold mt-5 bg-green-400 text-white rounded p-4 shadow-lg hover:bg-green-500"
+					className="font-bold mt-5 bg-green-400 text-white rounded-lg p-4 shadow-lg hover:bg-green-500"
 				>
 					Create Digital Asset
 				</button>
