@@ -2,6 +2,7 @@ import { ethers } from 'ethers';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Web3Modal from 'web3modal';
+import Image from 'next/image';
 
 import { nftmarketaddress, nftaddress } from '../config';
 
@@ -38,6 +39,8 @@ export default function MyAssets() {
 					seller: i.seller,
 					owner: i.owner,
 					image: meta.data.image,
+					name: meta.data.name,
+					description: meta.data.description,
 				};
 				return item;
 			})
@@ -47,14 +50,20 @@ export default function MyAssets() {
 	}
 	if (loadingState === 'loaded' && !nfts.length)
 		return <h1 className="py-10 px-20 text-3xl text-green-400">No assets owned</h1>;
-	// change img to Image
+
 	return (
 		<div className="flex justify-center">
 			<div className="p-4">
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
 					{nfts.map((nft, i) => (
-						<div key={i} className="border shadow rounded-xl overflow-hidden">
-							<img src={nft.image} className="rounded" />
+						<div key={i} className="shadow rounded-xl overflow-hidden">
+							<div className="h-96 w-96 relative">
+								<Image
+									src={nft.image}
+									alt={(nft.name, nft.description)}
+									layout="fill"
+								/>
+							</div>
 							<div className="p-4 bg-black">
 								<p className="text-2xl font-bold text-white">
 									Price - {nft.price} Eth

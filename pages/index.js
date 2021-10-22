@@ -78,7 +78,6 @@ export default function Home() {
 									src={nft.image}
 									alt={(nft.name, nft.description)}
 									layout="fill"
-									objectFit="cover"
 								/>
 							</div>
 

@@ -8,6 +8,9 @@ module.exports = {
 				84: '21rem',
 				96: '24rem',
 			},
+			fontFamily: {
+				quicksand: "'Quicksand', serif",
+			},
 		},
 	},
 	variants: {
