@@ -11,6 +11,7 @@ module.exports = {
 			fontFamily: {
 				quicksand: "'Quicksand', serif",
 			},
+			backgroundColor: ['active'],
 		},
 	},
 	variants: {

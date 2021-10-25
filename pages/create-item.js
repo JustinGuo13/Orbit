@@ -80,21 +80,21 @@ export default function CreateItem() {
 			<div className="w-1/2 flex flex-col pb-12">
 				<input
 					placeholder="Asset Name"
-					className="mt-8 border-2 rounded-lg border-green-500 p-4 bg-gray-800 placeholder-green-300 text-white outline-none"
+					className="mt-8 tracking-wider border-2 rounded-lg border-green-500 p-4 bg-gray-800 placeholder-green-300 text-white outline-none"
 					onChange={(e) => updateFormInput({ ...formInput, name: e.target.value })}
 				/>
 				<textarea
 					placeholder="Asset Description"
-					className="mt-5 border-2 rounded-lg border-green-500 p-4 bg-gray-800 placeholder-green-300 text-white outline-none"
+					className="mt-5 tracking-wider border-2 rounded-lg border-green-500 p-4 bg-gray-800 placeholder-green-300 text-white outline-none"
 					onChange={(e) => updateFormInput({ ...formInput, description: e.target.value })}
 				/>
 				<input
 					placeholder="Asset Price in Eth"
-					className="mt-5 border-2 rounded-lg border-green-500 p-4 bg-gray-800 placeholder-green-300 text-white outline-none"
+					className="mt-5 tracking-wider border-2 rounded-lg border-green-500 p-4 bg-gray-800 placeholder-green-300 text-white outline-none"
 					onChange={(e) => updateFormInput({ ...formInput, price: e.target.value })}
 				/>
 
-				<label className="w-48 flex flex-col items-center px-4 py-6 bg-green-400 rounded-lg shadow-lg tracking-wide uppercase my-5 cursor-pointer hover:bg-green-500 hover:text-white">
+				<label className="w-48 flex flex-col items-center px-4 py-6 bg-green-400 rounded-lg shadow-lg tracking-wider uppercase my-5 cursor-pointer hover:bg-green-500 hover:text-white">
 					<svg
 						className="w-8 h-8"
 						fill="currentColor"
@@ -103,7 +103,7 @@ export default function CreateItem() {
 					>
 						<path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
 					</svg>
-					<span className="mt-2 text-base leading-normal">Select a file</span>
+					<span className="mt-2 text-lg text-base leading-normal">Select a file</span>
 					<input type="file" name="Asset" className="hidden" onChange={onChange} />
 				</label>
 
@@ -115,7 +115,7 @@ export default function CreateItem() {
 
 				<button
 					onClick={createMarket}
-					className="font-bold mt-5 bg-green-400 text-white rounded-lg p-6 shadow-lg hover:bg-green-500"
+					className="font-bold text-xl tracking-widest mt-5 bg-green-400 text-white rounded-lg p-6 shadow-lg hover:bg-green-500"
 				>
 					Create Digital Asset
 				</button>
