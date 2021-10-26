@@ -10,7 +10,7 @@ function openMenu() {
 		menu.classList.toggle('hidden');
 	});
 }
-
+//style navbar
 function MyApp({ Component, pageProps }) {
 	return (
 		<div>
