@@ -94,7 +94,7 @@ export default function CreateItem() {
 					onChange={(e) => updateFormInput({ ...formInput, price: e.target.value })}
 				/>
 
-				<label className="w-48 flex flex-col items-center px-4 py-6 bg-green-400 rounded-lg shadow-lg tracking-wider uppercase my-5 cursor-pointer hover:bg-green-500 hover:text-white">
+				<label className="w-48 flex flex-col items-center px-4 py-6 bg-green-400 rounded-lg shadow-lg tracking-wider uppercase my-5 cursor-pointer hover:bg-green-500 hover:text-white transition duration-200">
 					<svg
 						className="w-8 h-8"
 						fill="currentColor"
@@ -115,7 +115,7 @@ export default function CreateItem() {
 
 				<button
 					onClick={createMarket}
-					className="font-bold text-xl tracking-widest mt-5 bg-green-400 text-white rounded-lg p-6 shadow-lg hover:bg-green-500"
+					className="font-bold text-xl tracking-widest mt-5 bg-green-400 text-white rounded-lg p-6 shadow-lg hover:bg-green-500 transition duration-200"
 				>
 					Create Digital Asset
 				</button>

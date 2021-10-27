@@ -73,7 +73,7 @@ export default function Home() {
 				<div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 					{nfts.map((nft, i) => (
 						<div key={i} className="shadow rounded-xl overflow-hidden">
-							<div className="h-96 w-96 relative">
+							<div className="h-96 w-full relative">
 								<Image
 									src={nft.image}
 									alt={(nft.name, nft.description)}
@@ -81,7 +81,7 @@ export default function Home() {
 								/>
 							</div>
 
-							<div className="p-4 bg-green-400">
+							<div className="p-4 bg-green-400 sm:p-10">
 								<p
 									style={{ height: '64px' }}
 									className="text-gray-900 text-3xl font-semibold "
@@ -89,7 +89,7 @@ export default function Home() {
 									{nft.name}
 								</p>
 								<div style={{ height: '70px', overflow: 'hidden' }}>
-									<p className="text-gray-900 text-xl">{nft.description}</p>
+									<p className="text-gray-900 text-2xl">{nft.description}</p>
 								</div>
 							</div>
 							<div className="p-4 bg-black">
@@ -97,7 +97,7 @@ export default function Home() {
 									{nft.price} ETH
 								</p>
 								<button
-									className="w-full bg-green-400 text-white text-xl font-bold py-2 px-12 rounded hover:bg-green-500"
+									className="w-full bg-green-400 text-white text-xl font-bold py-2 px-12 rounded hover:bg-green-500 transition duration-200"
 									onClick={() => buyNft(nft)}
 								>
 									Buy

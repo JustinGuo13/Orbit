@@ -11,11 +11,10 @@ module.exports = {
 			fontFamily: {
 				quicksand: "'Quicksand', serif",
 			},
-			backgroundColor: ['active'],
 		},
 	},
 	variants: {
-		extend: {},
+		extend: { backgroundColor: ['hover'] },
 	},
 	plugins: [require('@tailwindcss/aspect-ratio')],
 };
