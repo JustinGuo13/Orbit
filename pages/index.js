@@ -66,7 +66,7 @@ export default function Home() {
 
 	if (loadingState === 'loaded' && !nfts.length)
 		return <h1 className="px-20 py-10 text-3xl text-green-400">No items in marketplace</h1>;
-	// fix img aspect ratio
+	// fix image aspect ratio
 	return (
 		<div className="flex justify-center">
 			<div className="p-4" style={{ maxWidth: '1600px' }}>
