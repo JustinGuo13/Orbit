@@ -57,11 +57,12 @@ export default function MyAssets() {
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
 					{nfts.map((nft, i) => (
 						<div key={i} className="shadow rounded-xl overflow-hidden">
-							<div className="h-96 w-96 relative">
+							<div className="h-64 w-full relative sm:64 md:96 lg:h-96 xl:h-96">
 								<Image
 									src={nft.image}
 									alt={(nft.name, nft.description)}
 									layout="fill"
+									objectFit="cover"
 								/>
 							</div>
 							<div className="p-4 bg-black">

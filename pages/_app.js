@@ -2,6 +2,8 @@ import '../styles/globals.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import Footer from '../components/Footer';
+
 function openMenu() {
 	const btn = document.querySelector('button.mobile-menu-button');
 	const menu = document.querySelector('.mobile-menu');
@@ -153,6 +155,7 @@ function MyApp({ Component, pageProps }) {
 				</div>
 			</nav>
 			<Component {...pageProps} />
+			<Footer />
 		</div>
 	);
 }

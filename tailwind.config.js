@@ -9,7 +9,7 @@ module.exports = {
 				96: '24rem',
 			},
 			fontFamily: {
-				quicksand: "'Quicksand', serif",
+				zen: "'Zen Kaku Gothic Antique', sans-serif",
 			},
 		},
 	},

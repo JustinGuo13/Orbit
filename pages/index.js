@@ -68,32 +68,32 @@ export default function Home() {
 		return <h1 className="px-20 py-10 text-3xl text-green-400">No items in marketplace</h1>;
 	// fix image aspect ratio
 	return (
-		<div className="flex justify-center">
+		<div className="flex justify-center flex-shrink-0">
 			<div className="p-4" style={{ maxWidth: '1600px' }}>
 				<div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 					{nfts.map((nft, i) => (
 						<div key={i} className="shadow rounded-xl overflow-hidden">
-							<div className="h-96 w-full relative">
+							<div className="h-64 w-full relative sm:64 md:96 lg:h-96 xl:h-96 ">
 								<Image
 									src={nft.image}
 									alt={(nft.name, nft.description)}
 									layout="fill"
+									objectFit="cover"
 								/>
 							</div>
 
-							<div className="p-4 bg-green-400 sm:p-10">
-								<p
-									style={{ height: '64px' }}
-									className="text-gray-900 text-3xl font-semibold "
-								>
+							<div className="p-4 bg-green-400">
+								<p className="text-gray-900 text-3xl font-semibold break-words mb-2  ">
 									{nft.name}
 								</p>
-								<div style={{ height: '70px', overflow: 'hidden' }}>
-									<p className="text-gray-900 text-2xl">{nft.description}</p>
+								<div>
+									<p className="text-gray-900 text-2xl break-words ">
+										{nft.description}
+									</p>
 								</div>
 							</div>
 							<div className="p-4 bg-black">
-								<p className="text-2xl mb-4 font-bold text-white">
+								<p className="text-2xl mb-4 font-bold text-white tracking-wide">
 									{nft.price} ETH
 								</p>
 								<button

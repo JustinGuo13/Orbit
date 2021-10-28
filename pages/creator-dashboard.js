@@ -59,14 +59,15 @@ export default function CreatorDashboard() {
 		<div>
 			<div className="px-10 py-5">
 				<h2 className="text-green-400 text-3xl py-2">Items Created</h2>
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-4">
 					{nfts.map((nft, i) => (
 						<div key={i} className="shadow rounded-xl overflow-hidden">
-							<div className="h-96 w-full relative">
+							<div className="h-64 w-full relative sm:64 md:96 lg:h-96 xl:h-96 ">
 								<Image
 									src={nft.image}
 									alt={(nft.name, nft.description)}
 									layout="fill"
+									objectFit="cover"
 								/>
 							</div>
 							<div className="p-4 bg-black">
@@ -85,11 +86,12 @@ export default function CreatorDashboard() {
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
 							{sold.map((nft, i) => (
 								<div key={i} className="shadow rounded-xl overflow-hidden">
-									<div className="h-96 w-full relative">
+									<div className="h-64 w-full relative sm:64 md:96 lg:h-96 xl:h-96 ">
 										<Image
 											src={nft.image}
 											alt={(nft.name, nft.description)}
 											layout="fill"
+											objectFit="cover"
 										/>
 									</div>
 
