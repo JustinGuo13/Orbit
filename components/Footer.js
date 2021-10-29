@@ -1,3 +1,4 @@
+//fix footer
 const Footer = () => {
 	return (
 		<footer
@@ -7,7 +8,6 @@ const Footer = () => {
              inset-x-0
              bottom-0
 			 bg-gray-900
-			 
              p-3
 			 "
 		>
