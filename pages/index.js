@@ -17,7 +17,9 @@ export default function Home() {
 	}, []);
 	async function loadNFTs() {
 		/* create a generic provider and query for unsold market items */
-		const provider = new ethers.providers.JsonRpcProvider();
+		const provider = new ethers.providers.JsonRpcProvider(
+			'https://matic-mumbai.chainstacklabs.com'
+		);
 		const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider);
 		const marketContract = new ethers.Contract(nftmarketaddress, Market.abi, provider);
 		const data = await marketContract.fetchMarketItems();
@@ -73,7 +75,7 @@ export default function Home() {
 				<div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 					{nfts.map((nft, i) => (
 						<div key={i} className="shadow rounded-xl overflow-hidden">
-							<div className="h-64 w-full relative sm:64 md:96 lg:h-96 xl:h-96 ">
+							<div className="h-64 w-full relative sm:h-64 md:h-96 lg:h-96 xl:h-96">
 								<Image
 									src={nft.image}
 									alt={(nft.name, nft.description)}
@@ -82,12 +84,12 @@ export default function Home() {
 								/>
 							</div>
 
-							<div className="p-4 bg-green-400">
+							<div className="p-4 h-40 bg-green-400">
 								<p className="text-gray-900 text-3xl font-semibold break-words mb-2  ">
 									{nft.name}
 								</p>
 								<div>
-									<p className="text-gray-900 text-2xl break-words ">
+									<p className="text-gray-900 text-2xl break-words">
 										{nft.description}
 									</p>
 								</div>

@@ -52,12 +52,13 @@ export default function MyAssets() {
 		return <h1 className="py-10 px-20 text-3xl text-green-400">No assets owned</h1>;
 
 	return (
-		<div className="flex justify-center">
-			<div className="p-4">
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+		<div className="">
+			<div className="px-10 py-5">
+				<h2 className="text-green-400 text-3xl py-2">Your assets</h2>
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-4">
 					{nfts.map((nft, i) => (
 						<div key={i} className="shadow rounded-xl overflow-hidden">
-							<div className="h-64 w-full relative sm:64 md:96 lg:h-96 xl:h-96">
+							<div className="h-64 w-full relative sm:h-64 md:h-96 lg:h-96 xl:h-96">
 								<Image
 									src={nft.image}
 									alt={(nft.name, nft.description)}

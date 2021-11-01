@@ -53,8 +53,10 @@ export default function CreatorDashboard() {
 		setNfts(items);
 		setLoadingState('loaded');
 	}
+
 	if (loadingState === 'loaded' && !nfts.length)
 		return <h1 className="py-10 px-20 text-3xl text-green-400">No assets created</h1>;
+
 	return (
 		<div>
 			<div className="px-10 py-5">
@@ -62,7 +64,7 @@ export default function CreatorDashboard() {
 				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-4">
 					{nfts.map((nft, i) => (
 						<div key={i} className="shadow rounded-xl overflow-hidden">
-							<div className="h-64 w-full relative sm:64 md:96 lg:h-96 xl:h-96 ">
+							<div className="h-64 w-full relative sm:h-64 md:h-96 lg:h-96">
 								<Image
 									src={nft.image}
 									alt={(nft.name, nft.description)}
@@ -86,7 +88,7 @@ export default function CreatorDashboard() {
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
 							{sold.map((nft, i) => (
 								<div key={i} className="shadow rounded-xl overflow-hidden">
-									<div className="h-64 w-full relative sm:64 md:96 lg:h-96 xl:h-96 ">
+									<div className="h-64 w-full relative sm:h-64 md:h-96 lg:h-96 xl:h-96">
 										<Image
 											src={nft.image}
 											alt={(nft.name, nft.description)}
