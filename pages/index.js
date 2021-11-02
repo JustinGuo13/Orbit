@@ -68,7 +68,7 @@ export default function Home() {
 
 	if (loadingState === 'loaded' && !nfts.length)
 		return <h1 className="px-20 py-10 text-3xl text-green-400">No items in marketplace</h1>;
-	// fix image aspect ratio
+
 	return (
 		<div className="flex justify-center flex-shrink-0">
 			<div className="p-4" style={{ maxWidth: '1600px' }}>
@@ -84,11 +84,11 @@ export default function Home() {
 								/>
 							</div>
 
-							<div className="p-4 h-40 bg-green-400">
-								<p className="text-gray-900 text-3xl font-semibold break-words mb-2  ">
+							<div className="p-4 h-40 bg-green-400 overflow-hidden ">
+								<p className="text-gray-900 text-3xl font-semibold break-words mb-2 ">
 									{nft.name}
 								</p>
-								<div>
+								<div className="h-40 overflow-hidden">
 									<p className="text-gray-900 text-2xl break-words">
 										{nft.description}
 									</p>
