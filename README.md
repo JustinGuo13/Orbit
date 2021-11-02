@@ -1,15 +1,5 @@
-# Basic Sample Hardhat Project
+# NFT Marketplace
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+A Full Stack NFT Marketplace on Ethereum with Polygon
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+![orbit](https://user-images.githubusercontent.com/47575608/139959874-aef77382-5120-4017-a4a4-a43644d9b2fa.png)
