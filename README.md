@@ -1,4 +1,4 @@
-# NFT Marketplace
+# Orbit
 
 A Full Stack NFT Marketplace on Ethereum with Polygon
 
